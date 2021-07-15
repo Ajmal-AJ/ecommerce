@@ -65,7 +65,7 @@
                 </div>
                 {% for category in categories %}
                 <div class="col-6 col-md-4">
-                    <div class="category-banner-wrap"><a href="{% url 'web:listing' %}"
+                    <div class="category-banner-wrap"><a href="{{category.get_absolute_url}}"
                             class="category-banner hover-scale">
                             <div class="category-banner-txt txt-dark txt-wrap txt-v-b txt-h-c">
                                 <div class="category-banner-txt-1">{{category.title}}</div>

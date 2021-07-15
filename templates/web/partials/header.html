@@ -190,48 +190,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="header-drop header-cart header-cart--overlay"><a class="drop-toggle js-sidecart-toggle" href="#"><i class="icn-cart"></i><span class="badge">23</span></a>
-                            <div class="sidecart js-sidecart">
-                                <div class="sidecart-top d-flex align-items-center">
-                                    <div class="sidecart-close js-sidecart-close"><i class="icn-close"></i>CLOSE</div>
-                                    <div class="sidecart-icon ml-auto"><i class="icn-cart"></i><span class="badge">23</span></div>
-                                </div>
-                                <div class="sidecart-table">
-                                    <div class="sidecart-prd">
-                                        <div class="sidecart-prd-photo-wrap">
-                                            <div class="sidecart-prd-photo"><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio=".78" data-src="{% static 'web/images/products/product-01.jpg' %}" alt=""></div><a href="#" class="sidecart-prd-delete"><i class="icn-close-1"></i></a>
-                                        </div>
-                                        <div class="sidecart-prd-info"><a href="#" class="sidecart-prd-title text-truncate">Basic knit dress chestdst egfdgd</a>
-                                            <div class="sidecart-prd-price"><span>1x</span><span>$39.00</span></div>
-                                            <div class="sidecart-prd-action"><a href="#">EDIT</a></div>
-                                        </div>
-                                    </div>
-                                    <div class="sidecart-prd">
-                                        <div class="sidecart-prd-photo-wrap">
-                                            <div class="sidecart-prd-photo"><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio=".78" data-src="{% static 'web/images/products/product-02.jpg' %}" alt=""></div><a href="#" class="sidecart-prd-delete"><i class="icn-close-1"></i></a>
-                                        </div>
-                                        <div class="sidecart-prd-info"><a href="#" class="sidecart-prd-title text-truncate">Basic knit dress chestdst egfdgd</a>
-                                            <div class="sidecart-prd-price"><span>1x</span><span>$39.00</span></div>
-                                            <div class="sidecart-prd-action"><a href="#">EDIT</a></div>
-                                        </div>
-                                    </div>
-                                    <div class="sidecart-prd">
-                                        <div class="sidecart-prd-photo-wrap">
-                                            <div class="sidecart-prd-photo"><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio=".78" data-src="{% static 'web/images/products/product-03.jpg' %}" alt=""></div><a href="#" class="sidecart-prd-delete"><i class="icn-close-1"></i></a>
-                                        </div>
-                                        <div class="sidecart-prd-info"><a href="#" class="sidecart-prd-title text-truncate">Basic knit dress chestdst egfdgd</a>
-                                            <div class="sidecart-prd-price"><span>1x</span><span>$39.00</span></div>
-                                            <div class="sidecart-prd-action"><a href="#">EDIT</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="sidecart-bot d-flex align-items-center">
-                                    <div>SUBTOTAL:</div>
-                                    <div class="ml-auto">$ 146.00</div>
-                                </div><a href="#" class="btn mln-btn btn-block">View Cart</a> <a href="#" class="btn mln-btn mln-btn--border btn-block">Checkout</a>
-                            </div>
-                            <div class="dark-overlay js-sidecart-close"></div>
-                        </div>
+                        {% include 'web/partials/sidecart.html' %}
                     </div>
                 </div>
             </div>

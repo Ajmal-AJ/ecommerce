@@ -1,0 +1,29 @@
+{% load static %}
+
+<div class="header-drop header-cart header-cart--overlay"><a class="drop-toggle js-sidecart-toggle" href="#"><i class="icn-cart"></i><span class="badge">{{cart_items|length}}</span></a>
+    <div class="sidecart js-sidecart">
+        <div class="sidecart-top d-flex align-items-center">
+            <div class="sidecart-close js-sidecart-close"><i class="icn-close"></i>CLOSE</div>
+            <div class="sidecart-icon ml-auto"><i class="icn-cart"></i><span class="badge">23</span></div>
+        </div>
+        <div class="sidecart-table">
+            {% for cart_item in cart_items %}
+            <div class="sidecart-prd">
+                <div class="sidecart-prd-photo-wrap">
+                    <div class="sidecart-prd-photo"><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio=".78" data-src="{{cart_item.product.get_single_image.image.crop.75x90}}" alt=""></div><a href="#" class="sidecart-prd-delete"><i class="icn-close-1"></i></a>
+                </div>
+                <div class="sidecart-prd-info"><a href="{{cart_item.product.get_absolute_url}}" class="sidecart-prd-title text-truncate">{{cart_item.product.title}}</a>
+                    <div class="sidecart-prd-price"><span>{{cart_item.quantity}}x</span><span>&#8377;{{cart_item.product.price}}</span></div>
+                    <div class="sidecart-prd-action"><a href="#">EDIT</a></div>
+                </div>
+            </div>
+            {% endfor %}
+            
+        </div>
+        <div class="sidecart-bot d-flex align-items-center">
+            <div>SUBTOTAL:</div>
+            <div class="ml-auto">$ 146.00</div>
+        </div><a href="#" class="btn mln-btn btn-block">View Cart</a> <a href="#" class="btn mln-btn mln-btn--border btn-block">Checkout</a>
+    </div>
+    <div class="dark-overlay js-sidecart-close"></div>
+</div>

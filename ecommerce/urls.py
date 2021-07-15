@@ -11,6 +11,7 @@ urlpatterns = [
     path('sales/',include('sales.urls',namespace='sales')),
     path('customers/',include('customers.urls',namespace='customers')),
     path('vendors/',include('vendors.urls',namespace='vendors')),
+    path('app/',include('app.urls',namespace='app')),
     path('tinymce/', include('tinymce.urls')),
 
     path('',include('demo.urls',namespace='demo')),

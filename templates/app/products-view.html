@@ -1,0 +1,64 @@
+{% extends 'app/base.html' %}
+ {% load static %}
+  {% block content %}
+
+<div class="container-scroller">
+  <div class="container-fluid page-body-wrapper">
+    {% include 'app/partials/right-sidepanel.html' %}
+    {% include 'app/partials/leftsidebar.html' %}
+    
+    <div class="main-panel">
+      <div class="content-wrapper">
+        <div class="row">
+          <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Customers</h4>
+                <p class="card-description">
+                  <!-- Add class <code>.table-striped</code> -->
+                </p>
+                <div class="table-responsive">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Id</th>
+                        <th>Product Name</th>
+                        <th>Product Image</th>
+                        <th>Price</th>
+                        <th>Opening Stock</th>
+                        <th>Current Stock</th>
+                        <th>Available Stock</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for product in products %}
+                      <tr>
+                        <td>
+                          {{product.product_id}}
+                      </td>
+                        <td>
+                            {{product.title}}
+                        </td>
+                        <td class="py-1">
+                            <img src="{{product.get_single_image.image.crop.50x50}}" alt="image"/>
+                        </td>
+                        
+                         <td>{{product.price}}</td>
+                        <td>{{product.opening_stock}}</td>
+                        <td>{{product.current_stock}}</td>
+                        <td>{{product.get_stock}}</td> 
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+</div>
+{% endblock %}

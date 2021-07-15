@@ -7,7 +7,7 @@ from decimal import Decimal
 
 
 class Sale(BaseModel):
-    customer =models.ForeignKey('customers.Customer',default= "",on_delete=models.CASCADE)
+    customer =models.ForeignKey('customers.Customer',on_delete=models.PROTECT)
     date = models.DateField(auto_now_add=True)
     discount = models.DecimalField(default=0.0,decimal_places=2,max_digits=15,validators=[MinValueValidator(Decimal('0.00'))])
 
@@ -16,9 +16,10 @@ class Sale(BaseModel):
 
 
 class SaleItem(BaseModel):
-    sale =models.ForeignKey(Sale, on_delete=models.CASCADE) 
-    product = models.ForeignKey('products.Product',on_delete=models.CASCADE)
-    Quantity =models.DecimalField(default=0.0,decimal_places=2,max_digits=15,validators=[MinValueValidator(Decimal('0.00'))])
-    
+    sale = models.ForeignKey(Sale, on_delete=models.PROTECT) 
+    product = models.ForeignKey('products.Product',on_delete=models.PROTECT)
+    quantity = models.DecimalField(default=0,decimal_places=0,max_digits=15,validators=[MinValueValidator(Decimal('0'))])
+    is_ordered = models.BooleanField(default=False)
+
     def __str__(self):
         return str(self.product)
