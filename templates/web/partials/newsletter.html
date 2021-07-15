@@ -1,0 +1,22 @@
+{% load static %}
+<div class="modal fade modal-newsletter" id="newsLetterModal" data-pause="5000" data-expires="15" data-animate-start="zoomIn" data-animate-end="fadeOut">
+    <div class="modal-dialog-wrap">
+        <div class="modal-dialog">
+            <div class="modal-content"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="icn-close-1"></i></button>
+                <div class="row">
+                    <div class="col-sm-6 col-image lazyload" data-bgset="{% static 'web/images/content/modal-newsletter-img.jpg' %}"></div>
+                    <div class="col-sm-6 col-form">
+                        <h3 class="modal-newsletter-title">Newsletter</h3>
+                        <p>The subscription form can immediately tell people what they get in exchange for the provided information.</p>
+                        <div class="modal-newsletter-form">
+                            <form action="#">
+                                <div class="form-group"><input type="text" class="form-control" placeholder="Your email"> <button class="btn mln-btn" type="button">Subscribe</button></div>
+                                <div class="form-checkbox-wrap"><input id="newsLetterModalCheckBox" name="checkbox1" type="checkbox" checked="checked"> <label for="newsLetterModalCheckBox">Don't show this popup</label></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

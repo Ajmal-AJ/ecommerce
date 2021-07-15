@@ -1,0 +1,455 @@
+[
+    {
+        "model": "taggit.tag",
+        "pk": 1,
+        "fields": {
+            "name": "warm",
+            "slug": "warm"
+        }
+    },
+    {
+        "model": "taggit.tag",
+        "pk": 2,
+        "fields": {
+            "name": "accessories",
+            "slug": "accessories"
+        }
+    },
+    {
+        "model": "taggit.tag",
+        "pk": 3,
+        "fields": {
+            "name": "sweater",
+            "slug": "sweater"
+        }
+    },
+    {
+        "model": "taggit.tag",
+        "pk": 4,
+        "fields": {
+            "name": "skirt",
+            "slug": "skirt"
+        }
+    },
+    {
+        "model": "main.uuidtaggeditem",
+        "pk": 1,
+        "fields": {
+            "tag": 1,
+            "content_type": 16,
+            "object_id": "653fc718-5fbc-4c3a-8928-a16282df3187"
+        }
+    },
+    {
+        "model": "main.uuidtaggeditem",
+        "pk": 2,
+        "fields": {
+            "tag": 2,
+            "content_type": 16,
+            "object_id": "653fc718-5fbc-4c3a-8928-a16282df3187"
+        }
+    },
+    {
+        "model": "main.uuidtaggeditem",
+        "pk": 3,
+        "fields": {
+            "tag": 3,
+            "content_type": 16,
+            "object_id": "653fc718-5fbc-4c3a-8928-a16282df3187"
+        }
+    },
+    {
+        "model": "main.uuidtaggeditem",
+        "pk": 4,
+        "fields": {
+            "tag": 4,
+            "content_type": 16,
+            "object_id": "653fc718-5fbc-4c3a-8928-a16282df3187"
+        }
+    },
+    {
+        "model": "main.uuidtaggeditem",
+        "pk": 5,
+        "fields": {
+            "tag": 1,
+            "content_type": 16,
+            "object_id": "89e8655a-fc05-4259-b7a8-8a3bfc9c13d1"
+        }
+    },
+    {
+        "model": "main.uuidtaggeditem",
+        "pk": 6,
+        "fields": {
+            "tag": 3,
+            "content_type": 16,
+            "object_id": "89e8655a-fc05-4259-b7a8-8a3bfc9c13d1"
+        }
+    },
+    {
+        "model": "main.country",
+        "pk": "980ba1c9-dfd9-47bb-86d9-6834d2beb27e",
+        "fields": {
+            "date_added": "2021-07-07T11:19:40.133Z",
+            "date_updated": "2021-07-07T11:19:40.133Z",
+            "is_active": true,
+            "name": "INDIA"
+        }
+    },
+    {
+        "model": "main.state",
+        "pk": "78a4e63f-aaed-44ab-95c1-22b84a2c3f6f",
+        "fields": {
+            "date_added": "2021-07-07T11:19:52.702Z",
+            "date_updated": "2021-07-07T11:19:52.702Z",
+            "is_active": true,
+            "name": "KERALA",
+            "country": "980ba1c9-dfd9-47bb-86d9-6834d2beb27e"
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": "515a0667-4731-451b-a4f0-74e2b011f0bd",
+        "fields": {
+            "date_added": "2021-07-07T10:41:13.686Z",
+            "date_updated": "2021-07-07T10:41:13.686Z",
+            "is_active": true,
+            "category_id": 1,
+            "title": "Women Collection",
+            "image": "images/category/banner-counter-2-img.png"
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": "6a3d85d4-44fe-49c5-aaf4-d3f094bd8de8",
+        "fields": {
+            "date_added": "2021-07-07T10:42:17.846Z",
+            "date_updated": "2021-07-07T10:42:17.846Z",
+            "is_active": true,
+            "category_id": 3,
+            "title": "KIDS",
+            "image": "images/category/category2-03_HgHSlFW.jpg"
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": "7b67f977-a069-45ad-ab5d-063fcfed806b",
+        "fields": {
+            "date_added": "2021-07-07T10:42:35.765Z",
+            "date_updated": "2021-07-07T10:42:35.765Z",
+            "is_active": true,
+            "category_id": 4,
+            "title": "ACCESSORIES",
+            "image": "images/category/category-04_6EY0a94.jpg"
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": "84a5f53c-d9ac-4507-8b8c-30b218d212ec",
+        "fields": {
+            "date_added": "2021-07-07T10:41:46.614Z",
+            "date_updated": "2021-07-07T10:41:46.614Z",
+            "is_active": true,
+            "category_id": 2,
+            "title": "Men Collection",
+            "image": "images/category/category2-02_UjMaTAl.jpg"
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": "f1c6d3a9-4329-4774-9e80-3b59e4dd5beb",
+        "fields": {
+            "date_added": "2021-07-07T10:42:53.166Z",
+            "date_updated": "2021-07-07T10:42:53.166Z",
+            "is_active": true,
+            "category_id": 5,
+            "title": "SHOES",
+            "image": "images/category/category-05_gPqyO04.jpg"
+        }
+    },
+    {
+        "model": "products.subcategory",
+        "pk": "2a198afc-8431-444e-b551-25c90056fb6f",
+        "fields": {
+            "date_added": "2021-07-07T11:13:41.188Z",
+            "date_updated": "2021-07-07T11:13:41.188Z",
+            "is_active": true,
+            "title": "shirts",
+            "category": "84a5f53c-d9ac-4507-8b8c-30b218d212ec"
+        }
+    },
+    {
+        "model": "products.subcategory",
+        "pk": "77d27330-7d10-4a18-9047-10fcc438f22c",
+        "fields": {
+            "date_added": "2021-07-07T11:21:17.144Z",
+            "date_updated": "2021-07-07T11:21:17.144Z",
+            "is_active": true,
+            "title": "adidas shoes",
+            "category": "f1c6d3a9-4329-4774-9e80-3b59e4dd5beb"
+        }
+    },
+    {
+        "model": "products.subcategory",
+        "pk": "8378cbfd-70b3-4809-811b-c8c598dca579",
+        "fields": {
+            "date_added": "2021-07-07T11:11:52.425Z",
+            "date_updated": "2021-07-07T11:11:52.425Z",
+            "is_active": true,
+            "title": "Brushed basic hoodie",
+            "category": "515a0667-4731-451b-a4f0-74e2b011f0bd"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": "653fc718-5fbc-4c3a-8928-a16282df3187",
+        "fields": {
+            "date_added": "2021-07-07T11:13:14.203Z",
+            "date_updated": "2021-07-07T11:13:14.203Z",
+            "is_active": true,
+            "product_id": "1",
+            "slug": "hoodie",
+            "title": "hoodie",
+            "brand_id": "1",
+            "category": "8378cbfd-70b3-4809-811b-c8c598dca579",
+            "information": "<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; font-size: 15px; line-height: 28px; color: #999a9b; font-family: 'Work Sans', sans-serif;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis dolor eos culpa officia cumque delectus fugiat reiciendis totam itaque aut quo laudantium dolorum eligendi voluptatum ab tenetur iusto, reprehenderit neque!</p>\r\n<h5 style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; line-height: 24px; font-size: 18px; color: #2b2b2b; font-family: 'Work Sans', sans-serif;\">Features</h5>\r\n<ul class=\"marker-list mt-20\" style=\"box-sizing: border-box; padding: 0px 0px 10px; list-style: none; font-size: 15px; line-height: 22px; color: #2b2b2b; font-family: 'Work Sans', sans-serif; margin: 20px !important 0px 0px 0px;\">\r\n<li style=\"box-sizing: border-box; position: relative; padding-left: 20px; margin-bottom: 18px;\">Fully padded back panel, web hauded handle</li>\r\n<li style=\"box-sizing: border-box; position: relative; padding-left: 20px; margin-bottom: 18px;\">Internal padded sleeve fits 15\" laptop &amp; unique fabric application</li>\r\n<li style=\"box-sizing: border-box; position: relative; padding-left: 20px; margin-bottom: 18px;\">Internal tricot lined tablet sleeve</li>\r\n<li style=\"box-sizing: border-box; position: relative; padding-left: 20px; margin-bottom: 18px;\">One large main compartment and zippered</li>\r\n<li style=\"box-sizing: border-box; position: relative; padding-left: 20px; margin-bottom: 18px;\">Premium cotton canvas fabric</li>\r\n<li style=\"box-sizing: border-box; position: relative; padding-left: 20px;\">SKU: 2579-MK96 Catego</li>\r\n</ul>",
+            "details": "Praesent fringilla est id egestas a pretium consectetur quisque consectetur pulvinar at vestibulum vitae id praesent eget magnis vestibulum.Facilisis adipiscing nulla blandit sem nec est vestibulum malesuada in.",
+            "price": "49.00",
+            "mrp": "89.00",
+            "cost": "0.00",
+            "opening_stock": "5",
+            "current_stock": "10"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": "89e8655a-fc05-4259-b7a8-8a3bfc9c13d1",
+        "fields": {
+            "date_added": "2021-07-07T11:15:00.719Z",
+            "date_updated": "2021-07-07T11:15:00.719Z",
+            "is_active": true,
+            "product_id": "2",
+            "slug": "shirts",
+            "title": "shirts",
+            "brand_id": "1",
+            "category": "2a198afc-8431-444e-b551-25c90056fb6f",
+            "information": "<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; font-size: 15px; line-height: 28px; color: #999a9b; font-family: 'Work Sans', sans-serif;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam ipsa dolore itaque officia impedit hic non sed aperiam ullam, maxime perspiciatis, fugiat, sint vitae facere repellat dolorum earum voluptates quae!</p>\r\n<p style=\"box-sizing: border-box; margin-top: 20px; margin-bottom: 1rem; font-size: 15px; line-height: 28px; color: #999a9b; font-family: 'Work Sans', sans-serif;\">Natus perspiciatis inventore eligendi dolore, iure similique. Eaque, soluta iure consequatur esse repudiandae laboriosam voluptas provident, cum eos voluptatibus voluptate error. Asperiores, dolorem, itaque! Necessitatibus modi sunt ea voluptatibus aliquid.</p>",
+            "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis dolor eos culpa officia cumque delectus fugiat reiciendis totam itaque aut quo laudantium dolorum eligendi voluptatum ab tenetur iusto, reprehenderit neque!",
+            "price": "400.00",
+            "mrp": "1500.00",
+            "cost": "0.00",
+            "opening_stock": "0",
+            "current_stock": "0"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": "a5fd5d40-6114-4a00-a0a7-90dfc2d8c63c",
+        "fields": {
+            "date_added": "2021-07-07T11:22:11.522Z",
+            "date_updated": "2021-07-07T11:22:11.522Z",
+            "is_active": true,
+            "product_id": "3",
+            "slug": "shoes",
+            "title": "Shoes",
+            "brand_id": "1",
+            "category": "77d27330-7d10-4a18-9047-10fcc438f22c",
+            "information": "<div class=\"container-wrap\" style=\"box-sizing: border-box; margin-top: 85px; color: #999a9b; font-family: 'Work Sans', sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\">\r\n<div class=\"container\" style=\"box-sizing: border-box; width: 1140px; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto; max-width: 1140px;\">\r\n<div class=\"title-wrap text-center\" style=\"box-sizing: border-box; text-align: center !important;\">&nbsp;</div>\r\n</div>\r\n</div>\r\n<div class=\"container-wrap mt-30 mt-md-50\" style=\"box-sizing: border-box; margin-top: 85px; color: #999a9b; font-family: 'Work Sans', sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\">\r\n<div class=\"container\" style=\"box-sizing: border-box; width: 1140px; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto; max-width: 1140px;\">\r\n<div class=\"product-tabs mt-40\" style=\"box-sizing: border-box; margin-top: 40px !important;\">\r\n<div class=\"tab-content\" style=\"box-sizing: border-box; padding: 40px 100px 0px;\">\r\n<div id=\"tab1\" class=\"tab-pane fade active show\" style=\"box-sizing: border-box; transition: opacity 0.15s linear 0s; display: block;\">\r\n<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; font-size: 15px; line-height: 28px;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis dolor eos culpa officia cumque delectus fugiat reiciendis totam itaque aut quo laudantium dolorum eligendi voluptatum ab tenetur iusto, reprehenderit neque!</p>\r\n<h5 style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; font-weight: bold; line-height: 24px; font-size: 18px; color: #2b2b2b;\">Features</h5>\r\n<ul class=\"marker-list mt-20\" style=\"box-sizing: border-box; padding: 0px 0px 10px; list-style: none; font-size: 15px; line-height: 22px; color: #2b2b2b; margin: 20px !important 0px 0px 0px;\">\r\n<li style=\"box-sizing: border-box; position: relative; padding-left: 20px; margin-bottom: 18px;\">Fully padded back panel, web hauded handle</li>\r\n<li style=\"box-sizing: border-box; position: relative; padding-left: 20px; margin-bottom: 18px;\">Internal padded sleeve fits 15\" laptop &amp; unique fabric application</li>\r\n<li style=\"box-sizing: border-box; position: relative; padding-left: 20px; margin-bottom: 18px;\">Internal tricot lined tablet sleeve</li>\r\n<li style=\"box-sizing: border-box; position: relative; padding-left: 20px; margin-bottom: 18px;\">One large main compartment and zippered</li>\r\n<li style=\"box-sizing: border-box; position: relative; padding-left: 20px; margin-bottom: 18px;\">Premium cotton canvas fabric</li>\r\n<li style=\"box-sizing: border-box; position: relative; padding-left: 20px;\">SKU: 2579-MK96 Catego</li>\r\n</ul>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>",
+            "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam ipsa dolore itaque officia impedit hic non sed aperiam ullam, maxime perspiciatis, fugiat, sint vitae facere repellat dolorum earum voluptates quae!\r\n\r\nNatus perspiciatis inventore eligendi dolore, iure similique. Eaque, soluta iure consequatur esse repudiandae laboriosam voluptas provident, cum eos voluptatibus voluptate error. Asperiores, dolorem, itaque! Necessitatibus modi sunt ea voluptatibus aliquid.",
+            "price": "1560.00",
+            "mrp": "3000.00",
+            "cost": "0.00",
+            "opening_stock": "0",
+            "current_stock": "0"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": "28e898d7-4d4b-4c9c-8118-7ccb078d2828",
+        "fields": {
+            "date_added": "2021-07-07T11:16:07.965Z",
+            "date_updated": "2021-07-07T11:16:07.965Z",
+            "is_active": true,
+            "product": "89e8655a-fc05-4259-b7a8-8a3bfc9c13d1",
+            "color": "ebba86ef-a0b2-4a5d-bc28-4fc6b37258b1",
+            "image": "images/products/category-02.jpg"
+        }
+    },
+    {
+        "model": "products.productimage",
+        "pk": "29f04cd6-bc89-4b34-aa7d-3c044bca214e",
+        "fields": {
+            "date_added": "2021-07-07T11:16:38.615Z",
+            "date_updated": "2021-07-07T11:16:38.615Z",
+            "is_active": true,
+            "product": "653fc718-5fbc-4c3a-8928-a16282df3187",
+            "color": "26a92883-c3c7-46c3-bb0f-24b6ddd5e08b",
+            "image": "images/products/product-gallery-04.jpg"
+        }
+    },
+    {
+        "model": "products.colour",
+        "pk": "1f37c828-8cfa-4cd8-ac1f-7bf069358e25",
+        "fields": {
+            "date_added": "2021-07-07T10:44:20.995Z",
+            "date_updated": "2021-07-07T10:44:20.995Z",
+            "is_active": true,
+            "title": "green",
+            "color_code": "#43764AFF"
+        }
+    },
+    {
+        "model": "products.colour",
+        "pk": "26a92883-c3c7-46c3-bb0f-24b6ddd5e08b",
+        "fields": {
+            "date_added": "2021-07-07T10:43:47.992Z",
+            "date_updated": "2021-07-07T10:43:47.992Z",
+            "is_active": true,
+            "title": "Red",
+            "color_code": "#FF0000FF"
+        }
+    },
+    {
+        "model": "products.colour",
+        "pk": "a85ecd75-5ee0-449d-89e0-45c2d8a81e24",
+        "fields": {
+            "date_added": "2021-07-07T10:43:34.193Z",
+            "date_updated": "2021-07-07T10:43:34.193Z",
+            "is_active": true,
+            "title": "White",
+            "color_code": "#FFFFFFFF"
+        }
+    },
+    {
+        "model": "products.colour",
+        "pk": "ebba86ef-a0b2-4a5d-bc28-4fc6b37258b1",
+        "fields": {
+            "date_added": "2021-07-07T10:44:00.387Z",
+            "date_updated": "2021-07-07T10:44:00.387Z",
+            "is_active": true,
+            "title": "Blue",
+            "color_code": "#1A28FFFF"
+        }
+    },
+    {
+        "model": "products.review",
+        "pk": "84a40873-6808-46af-a757-17f0a6639f3b",
+        "fields": {
+            "date_added": "2021-07-07T11:17:34.917Z",
+            "date_updated": "2021-07-07T11:17:34.917Z",
+            "is_active": true,
+            "product": "89e8655a-fc05-4259-b7a8-8a3bfc9c13d1",
+            "name": "Kevin Horton",
+            "image": "images/reviews/blog-lg-03.jpg",
+            "content": "Optio labore et qui"
+        }
+    },
+    {
+        "model": "products.review",
+        "pk": "a0f9cbaf-8851-4422-aae7-ee7c6b083350",
+        "fields": {
+            "date_added": "2021-07-07T11:18:05.945Z",
+            "date_updated": "2021-07-07T11:18:05.945Z",
+            "is_active": true,
+            "product": "89e8655a-fc05-4259-b7a8-8a3bfc9c13d1",
+            "name": "Remedios Ryan",
+            "image": "images/reviews/comment-author-01.jpg",
+            "content": "Enim perspiciatis p"
+        }
+    },
+    {
+        "model": "products.review",
+        "pk": "f812b6ab-5b3a-41dd-8b49-3daceff5b1c5",
+        "fields": {
+            "date_added": "2021-07-07T11:22:57.242Z",
+            "date_updated": "2021-07-07T11:22:57.242Z",
+            "is_active": true,
+            "product": "a5fd5d40-6114-4a00-a0a7-90dfc2d8c63c",
+            "name": "Jasper Williamson",
+            "image": "images/reviews/comment-author-02.jpg",
+            "content": "Vero aliquam sit ea"
+        }
+    },
+    {
+        "model": "products.material",
+        "pk": "31cf6cc9-2202-40bc-99dc-292dada1a595",
+        "fields": {
+            "date_added": "2021-07-07T10:45:15.774Z",
+            "date_updated": "2021-07-07T10:45:15.774Z",
+            "is_active": true,
+            "image": "images/matrials/material-02_2WHcpSv.jpg",
+            "title": "Cotton"
+        }
+    },
+    {
+        "model": "products.material",
+        "pk": "6e860896-a867-45ee-83c6-cd6e08bfb1ae",
+        "fields": {
+            "date_added": "2021-07-07T10:45:02.200Z",
+            "date_updated": "2021-07-07T10:45:02.200Z",
+            "is_active": true,
+            "image": "images/matrials/material-03_nJtIxW6.jpg",
+            "title": "Denim"
+        }
+    },
+    {
+        "model": "products.material",
+        "pk": "e5076cb8-d18b-469f-88ad-7dbc9760c201",
+        "fields": {
+            "date_added": "2021-07-07T10:45:26.946Z",
+            "date_updated": "2021-07-07T10:45:26.946Z",
+            "is_active": true,
+            "image": "images/matrials/material-01_gYNwHTl.jpg",
+            "title": "Velvet"
+        }
+    },
+    {
+        "model": "products.size",
+        "pk": "3f691d0d-2db0-49e9-ab9e-39a0e87ef115",
+        "fields": {
+            "date_added": "2021-07-07T11:18:26.700Z",
+            "date_updated": "2021-07-07T11:18:26.700Z",
+            "is_active": true,
+            "title": "XL"
+        }
+    },
+    {
+        "model": "products.size",
+        "pk": "72423cfa-0b63-4dda-a39d-81facd4c0e41",
+        "fields": {
+            "date_added": "2021-07-07T11:18:19.724Z",
+            "date_updated": "2021-07-07T11:18:19.724Z",
+            "is_active": true,
+            "title": "S"
+        }
+    },
+    {
+        "model": "products.size",
+        "pk": "a35cdf4d-7aa9-4045-a2f4-882c0d085ad5",
+        "fields": {
+            "date_added": "2021-07-07T11:18:14.031Z",
+            "date_updated": "2021-07-07T11:18:14.031Z",
+            "is_active": true,
+            "title": "M"
+        }
+    },
+    {
+        "model": "products.size",
+        "pk": "ee4118e9-021d-4831-98e6-a39075dcd467",
+        "fields": {
+            "date_added": "2021-07-07T11:18:23.565Z",
+            "date_updated": "2021-07-07T11:18:23.565Z",
+            "is_active": true,
+            "title": "XXL"
+        }
+    },
+    {
+        "model": "products.size",
+        "pk": "f7a6356a-af9a-41d1-aeec-023561706fc4",
+        "fields": {
+            "date_added": "2021-07-07T11:18:16.707Z",
+            "date_updated": "2021-07-07T11:18:16.707Z",
+            "is_active": true,
+            "title": "L"
+        }
+    }
+]

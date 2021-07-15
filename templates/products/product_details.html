@@ -1,0 +1,233 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+
+
+    <div class="container-wrap breadcrumb-wrap mt-0">
+        <div class="container-fluid">
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/listing.html">{{product.category.title}}</a></li>
+                    <li class="breadcrumb-item active">{{product.title}}</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <div class="container-wrap mt-30 mt-md-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="product-gallery thumbs-left">
+                            <div class="product-gallery-single">
+                                <ul class="js-product-single-carousel">
+                                    {% for product in product.get_images %}
+                                    <li>
+                                        <div class="easyzoom easyzoom--overlay"><a href="{{product.image.url}}"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio=".78" data-src="{{product.image.crop.470x500}}" alt="" class="product-img lazyload"></a></div>
+                                    </li>
+                                    {% endfor %}
+
+                                    <!-- <li>
+                                        <div class="easyzoom easyzoom--overlay"><a href="/images/products/product-gallery-02-zoom.jpg"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio=".78" data-src="/static/web/images/products/product-gallery-02.jpg" alt="" class="product-img lazyload"></a></div>
+                                    </li>
+                                    <li>
+                                        <div class="easyzoom easyzoom--overlay"><a href="/images/products/product-gallery-03-zoom.jpg"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio=".78" data-src="/static/web/images/products/product-gallery-03.jpg" alt="" class="product-img lazyload"></a></div>
+                                    </li>
+                                    <li>
+                                        <div class="easyzoom easyzoom--overlay"><a href="/images/products/product-gallery-04-zoom.jpg"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio=".78" data-src="/static/web/images/products/product-gallery-04.jpg" alt="" class="product-img lazyload"></a></div>
+                                    </li>
+                                    <li>
+                                        <div class="easyzoom easyzoom--overlay"><a href="/images/products/product-gallery-05-zoom.jpg"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio=".78" data-src="/static/web/images/products/product-gallery-05.jpg" alt="" class="product-img lazyload"></a></div>
+                                    </li>
+                                    <li>
+                                        <div class="easyzoom easyzoom--overlay"><a href="/images/products/product-gallery-06-zoom.jpg"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio=".78" data-src="/static/web/images/products/product-gallery-06.jpg" alt="" class="product-img lazyload"></a></div>
+                                    </li>
+                                    <li>
+                                        <div class="easyzoom easyzoom--overlay"><a href="/images/products/product-gallery-07-zoom.jpg"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio=".78" data-src="/static/web/images/products/product-gallery-07.jpg" alt="" class="product-img lazyload"></a></div>
+                                    </li>
+                                    <li>
+                                        <div class="easyzoom easyzoom--overlay"><a href="/images/products/product-gallery-08-zoom.jpg"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio=".78" data-src="/static/web/images/products/product-gallery-08.jpg" alt="" class="product-img lazyload"></a></div>
+                                    </li> -->
+                                </ul>
+                            </div>
+                            <div class="product-gallery-thumbs">
+                                <ul class="js-product-thumbs-carousel slick-squared-arrow">
+                                    {% for product in product.get_images %}
+                                    <li><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio="1" data-src="{{product.image.crop.70x70}}" alt=""></li>
+                                    {% endfor %}
+                                    <!-- <li><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio="1" data-src="/static/web/images/products/product-gallery-02.jpg" alt=""></li>
+                                    <li><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio="1" data-src="/static/web/images/products/product-gallery-03.jpg" alt=""></li>
+                                    <li><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio="1" data-src="/static/web/images/products/product-gallery-04.jpg" alt=""></li>
+                                    <li><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio="1" data-src="/static/web/images/products/product-gallery-05.jpg" alt=""></li>
+                                    <li><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio="1" data-src="/static/web/images/products/product-gallery-06.jpg" alt=""></li>
+                                    <li><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio="1" data-src="/static/web/images/products/product-gallery-07.jpg" alt=""></li>
+                                    <li><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio="1" data-src="/static/web/images/products/product-gallery-08.jpg" alt=""></li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-20 mt-md-0">
+                        <div class="product-infobox">
+                            <h2 class="product-title">{{product.title}}</h2>
+                            <div class="product-rating"><i class="icn-star_empty"></i><i class="icn-star_empty"></i><i class="icn-star_empty"></i><i class="icn-star_empty"></i><i class="icn-star_empty"></i><a href="/#tabReviews" class="tab-link">5 reviews</a></div>
+                            <div class="product-price"><span class="price-old">₹ {{product.mrp}}</span><span class="price-new">₹ {{product.price}}</span></div>
+                            <div class="product-description">{{product.details|safe}}</div>
+                            <div class="product-opts">
+                                <div class="product-opt">
+                                    <div class="product-opt-title">MATERIAL</div>
+                                    <div class="product-opt-col">
+                                        <ul class="opt-select js-opt-select dropdown-menu mln-dropdown-menu">
+                                            {% for material in materials %}
+                                            <li class="active"><a href="/#"><span><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio="1" data-src="{{material.image.url}}" alt=""></span>{{material.title}}</a></li>
+                                            {% endfor %}
+                                            <!-- <li class="active"><a href="/#"><span><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio="1" data-src="{% static 'web/images/products/colors/material-01.jpg' %}" alt=""></span>Denim</a></li>
+                                            <li><a href="/#"><span><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio="1" data-src="{% static 'web/images/products/colors/material-03.jpg' %}" alt=""></span>Cotton</a></li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="product-opt">
+                                    <div class="product-opt-title">COLOR</div>
+                                    <div class="product-opt-col">
+                                        <ul class="opts-list opts--color">                             
+                                            <li class="active" data-toggle="tooltip" data-placement="top" data-original-title="Clear Color"><a href="/#"><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio="1" data-src="{% static 'web/images/products/colors/color-01.jpg' %}" alt=""></a></li>                                           
+                                            <li data-toggle="tooltip" data-placement="top" data-original-title="Add Color"><a href="/#"><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio="1" data-src="{% static 'web/images/products/colors/color-02.jpg' %}" alt=""></a></li>
+                                            <li data-toggle="tooltip" data-placement="top" data-original-title="Add Color"><a href="/#"><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio="1" data-src="{% static 'web/images/products/colors/color-03.jpg' %}" alt=""></a></li>
+                                            <li data-toggle="tooltip" data-placement="top" data-original-title="Add Color"><a href="/#"><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio="1" data-src="{% static 'web/images/products/colors/color-04.jpg' %}" alt=""></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="product-opt">
+                                    <div class="product-opt-title">SIZE</div>
+                                    <div class="product-opt-col">
+                                        <ul class="opts-list opts--size">
+                                            {% for size in sizes %}
+                                            <li class="active" data-toggle="tooltip" data-placement="top" data-original-title="Clear Size"><a href="/#"><span>{{size.title}}</span></a></li>
+                                            {% endfor %}
+                                            <!-- <li data-toggle="tooltip" data-placement="top" data-original-title="Add Size"><a href="/#"><span>xs</span></a></li>
+                                            <li data-toggle="tooltip" data-placement="top" data-original-title="Add Size"><a href="/#"><span>s</span></a></li>
+                                            <li data-toggle="tooltip" data-placement="top" data-original-title="Add Size"><a href="/#"><span>m</span></a></li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-count-wrap">
+                                <div class="product-count-title">COUNT</div>
+                                <div class="product-count-col">
+                                    <div class="count-input"><a class="incr-btn" data-action="decrease" href="#">–</a> <input class="product-count" type="text" name="quantity" data-max="10" value="1"> <a class="incr-btn" data-action="increase" href="#">&plus;</a></div>
+                                </div>
+                            </div>
+                            <div class="product-action">
+                                <div class="btn mln-btn js-product-page-addtocart">Add To Cart</div>
+                            </div>
+                            <div class="product-custom brd-top"><img data-aspectratio="3" data-src= "{% static 'web/images/content/product-secure-banner.jpg' %}" alt="" class="img-fluid lazyload"></div>
+                            <div class="product-meta brd-top">
+                                <div class="product-meta-item"><span><b>ID:</b> {{product.product_id}}</span></div>
+                                <div class="product-meta-item"><span><b>CATEGORY:</b> <a href="/#">{{product.category}}</a>, <a href="/#">woman</a></span></div>
+                                <div class="product-meta-item"><span><b>BRAND:</b> {{product.brand}}</span></div>
+                            </div>
+                            <div class="product-meta">
+                                <div class="product-meta-item"><span><b>TAGS:</b> <a href="/#">accessories</a>, <a href="/#">skirt</a>, <a href="/#">sweater</a>, <a href="/#">warm</a></span></div>
+                            </div>
+                            <div class="product-meta">
+                                <div class="product-meta-item">
+                                    <div><b>SHARE</b>
+                                        <ul class="inline-socials d-inline">
+                                            <li><a href="/#"><i class="icn-facebook"></i></a></li>
+                                            <li><a href="/#"><i class="icn-twitter"></i></a></li>
+                                            <li><a href="/#"><i class="icn-instagram"></i></a></li>
+                                            <li><a href="/#"><i class="icn-pinterest"></i></a></li>
+                                            <li><a href="/#"><i class="icn-google-plus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-tabs mt-40">
+                    <ul class="nav nav-tabs">
+                        <li><a class="active" id="home-tab" data-toggle="tab" href="#tab1">ADDITIONAL INFORMATION</a></li>
+                        <li><a id="profile-tab" data-toggle="tab" href="#tab2">DETAILS</a></li>
+                        <li><a id="contact-tab" data-toggle="tab" href="#tab3">REVIEWS</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="tab1">
+                            <p>{{product.information|safe}}</p>
+                            <!-- <h5>Features</h5>
+                            <ul class="marker-list mt-20">
+                                <li>Fully padded back panel, web hauded handle</li>
+                                <li>Internal padded sleeve fits 15" laptop & unique fabric application</li>
+                                <li>Internal tricot lined tablet sleeve</li>
+                                <li>One large main compartment and zippered</li>
+                                <li>Premium cotton canvas fabric</li>
+                                <li>SKU: 2579-MK96 Catego</li>
+                            </ul> -->
+                        </div>
+                        <div class="tab-pane fade" id="tab2">
+                            <p>{{product.details}}</p>
+                        </div>
+                        <div class="tab-pane fade" id="tab3">
+                            <div class="product-reviews">
+                                {% for review in product.get_reviews %}
+                                <div class="product-review row">
+                                    <div class="col-auto product-review-photo"><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio="1.2" data-src="{{review.image.url}}" alt=""></div>
+                                    <div class="col product-review-content">
+                                        <div class="review-rating"><i class="icn-star_full"></i><i class="icn-star_full"></i><i class="icn-star_full"></i><i class="icn-star_full"></i><i class="icn-star_empty"></i></div>
+                                        <div class="row">
+                                            <div class="col product-review-name">{{review.name}}</div>
+                                            <div class="col-auto product-review-date">JULY 23 | 16:43</div>
+                                        </div>
+                                        <div class="product-review-text">{{review.content}}</div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-wrap">
+            <div class="container">
+                <div class="title-wrap text-center">
+                    <h3>Related Products</h3>
+                    <div class="title-decor"></div>
+                </div>
+                <div class="row product-carousel product-sm-2 js-product-carousel" data-slick='{ "dots":false, "arrows":true, "slidesToShow": 4, "slidesToScroll": 1, "responsive": [{"breakpoint": 1200,"settings": {"slidesToShow": 4}}, {"breakpoint": 1024,"settings": {"slidesToShow": 3, "dots":true, "arrows":false}}, {"breakpoint": 768,"settings": {"slidesToShow": 2,"dots":true, "arrows":false}}, {"breakpoint": 575,"settings": {"slidesToShow": 2,"dots":true, "arrows":false}}] }'>
+                   {% for related_product in product.get_related_products %}
+                    <div class="product-item">
+                        <div class="product-item-photo-wrap">
+                            <a href="{{related_product.get_absolute_url}}" class="product-item-photo"><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio=".78" data-srcset="{{related_product.get_single_image.image.url}}" alt="">
+                                <div class="mln-loader"><span></span><span></span><span></span></div>
+                            </a>
+                            <a href="{{related_product.get_absolute_url}}" class="product-item-oneclk">Buy in one click</a> <a href="{{related_product.get_absolute_url}}" class="product-item-qw"><i class="icn-search"></i></a>
+                            <div class="product-item-labels"></div>
+                        </div>
+                        <div class="product-item-info">
+                            <div class="product-item-actions-mbl"><a href="/#" class="btn mln-btn btn-one-click">Buy One Click</a> <a href="/#" class="btn mln-btn btn-options js-toggle-options">Select Options</a></div>
+                            <h2 class="product-item-title"><a href="{{related_product.get_absolute_url}}">{{related_product.title}}</a></h2>
+                            <div class="product-item-rating"><i class="icn-star_full"></i><i class="icn-star_full"></i><i class="icn-star_full"></i><i class="icn-star_full"></i><i class="icn-star_empty"></i></div>
+                            <ul class="product-item-meta">
+                                <li><b>SKU:</b> {{related_product.product_id}}</li>
+                                <li><b>Category:</b> <a href="/#">{{related_product.category.title}}</a>, <a href="/#">{{related_product.category.category.title}}</a></li>
+                                <li><b>Brand:</b> <a href="/#">{{related_product.brand}}</a></li>
+                            </ul>
+                            <div class="clearfix">
+                                <div class="float-left">
+                                    <div class="product-item-price">₹ {{related_product.price}}</div>
+                                </div>
+                                <div class="float-right"><a href="/#" class="product-item-action js-addtocart" data-toggle="tooltip" data-placement="top" title="Add to Cart"><i class="icn-addtocart"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+                <div class="text-center mt-30 mt-md-50"><a href="/listing.html" class="btn mln-btn">Show More</a></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

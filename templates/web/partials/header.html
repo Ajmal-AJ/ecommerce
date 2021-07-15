@@ -1,0 +1,357 @@
+{% load static %}
+<header class="off-shadow header-sticky">
+    <div class="header-desktop">
+        <div class="container-fluid">
+            <div class="row header-row">
+                <div class="col-auto header-col-l header-col-logo">
+                    <div class="header-logo hidden-sticky"><a href="/"><img src="{% static 'web/images/logo.png' %}" srcset="images/logo@2x.png 2x" alt="Logo"></a></div>
+                    <div class="header-logo visible-sticky"><a href="/"><img src="{% static 'web/images/logo-sticky.png' %}" srcset="images/logo@2x.png 2x" alt="Logo"></a></div>
+                </div>
+                <div class="col header-col-c">
+                    <div class="nav-wrap">
+                        <nav>
+                            <ul class="desktop-megamenu js-megamenu">
+                                <li class="js-link-megamenu"><a href="/">HOME</a>
+                                    <div class="dropdown-megamenu">
+                                        <div class="dropdown-megamenu-scroll">
+                                            <div class="row">
+                                                <div class="col col-width-2">
+                                                    <h3>Choose demo layout</h3>
+                                                    <ul>
+                                                        <li><a href="index.html">Layout 01</a></li>
+                                                        <li><a href="index-02.html">Layout 02</a></li>
+                                                        <li><a href="index-03.html">Layout 03</a></li>
+                                                        <li><a href="index-04.html">Layout 04</a></li>
+                                                        <li><a href="index-05.html">Layout 05</a></li>
+                                                        <li><a href="index-06.html">Layout 06</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col col-width-2">
+                                                    <h3>Choose demo skin</h3>
+                                                    <ul>
+                                                        <li><a href="index.html">Default Fashion</a></li>
+                                                        <li><a href="index-skin-accessories.html">Accessories</a></li>
+                                                        <li><a href="index-skin-techstore.html">Techstore</a></li>
+                                                        <li><a href="index-skin-wheels.html">Wheels</a></li>
+                                                        <li><a href="index-skin-furniture.html">Furniture</a></li>
+                                                        <li><a href="coming-soon.html">Cooming Soon ....</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col col-width-2 img-right"><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio="1" data-src="{% static 'web/images/megamenu/megamenu-img.png' %}" alt=""></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="js-link-megamenu"><a href="listing.html">SHOP</a>
+                                    <div class="dropdown-megamenu">
+                                        <div class="dropdown-megamenu-scroll">
+                                            <div class="row">
+                                                <div class="col col-width-3">
+                                                    <h3>Product Listing</h3>
+                                                    <ul>
+                                                        <li><a href="listing.html">Left Column</a></li>
+                                                        <li><a href="listing-right-col.html">Right Column</a></li>
+                                                        <li><a href="listing-no-col.html">Without Column</a></li>
+                                                        <li><a href="listing-no-banner.html">Without Banners</a></li>
+                                                        <li><a href="listing-sticky-filter.html">Sticky Filter</a></li>
+                                                        <li><a href="listing-sticky-filters-row.html">Sticky Row Filter</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col col-width-3">
+                                                    <h3>Products grid</h3>
+                                                    <ul>
+                                                        <li><a href="listing-2-per-row.html">Two per row</a></li>
+                                                        <li><a href="listing-no-col.html">Three per row</a></li>
+                                                        <li><a href="listing-4-per-row.html">Four per row</a></li>
+                                                    </ul>
+                                                    <div class="mt-20"><a href="listing.html"><img src="{% static 'web/images/megamenu/megamenu-img-03.jpg' %}" class="img-responsive" alt=""></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="js-link-megamenu"><a href="{% url 'products:products' %}">PRODUCT</a>
+                                    <div class="dropdown-megamenu">
+                                        <div class="dropdown-megamenu-scroll">
+                                            <div class="row">
+                                                <div class="col col-width-3">
+                                                    <h3>Product Layout</h3>
+                                                    <ul>
+                                                        <li><a href="product.html">Left Previews</a></li>
+                                                        <li><a href="product-6.html">Right Previews</a></li>
+                                                        <li><a href="product-2.html">Bottom Previews</a></li>
+                                                        <li><a href="product-7.html">Top Previews</a></li>
+                                                        <li><a href="product-3.html">Bottom Previews Grid</a></li>
+                                                        <li><a href="product-4.html">Gallery Grid</a></li>
+                                                        <li><a href="product-5.html">Fixed Gallery</a></li>
+                                                        <li><a href="product-8.html">Reverse Columns</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col col-width-3 img-right"><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio="1" data-src="{% static 'web/images/megamenu/megamenu-img-02.png' %}" alt=""></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="js-link-megamenu"><a href="#">PAGES</a>
+                                    <div class="dropdown-megamenu">
+                                        <div class="dropdown-megamenu-scroll">
+                                            <div class="row">
+                                                <div class="col col-width-2">
+                                                    <h3>Info Pages</h3>
+                                                    <ul>
+                                                        <li><a href="about.html">About Us</a></li>
+                                                        <li><a href="contacts.html">Contact</a></li>
+                                                        <li><a href="faq.html">FAQ</a></li>
+                                                        <li><a href="page404.html">404 Page</a></li>
+                                                        <li><a href="coming-soon.html">Coming Soon</a></li>
+                                                        <li><a href="typography.html">Typography</a></li>
+                                                        <li><a href="lookbook.html">Lookbook</a></li>
+                                                        <li><a href="gift-card.html">Gift Card</a></li>
+                                                        <li class="js-link-submenu"><a href="gallery.html">Gallery</a>
+                                                            <ul class="js-submenu">
+                                                                <li><a href="gallery.html">Gallery 3 Column</a></li>
+                                                                <li><a href="gallery-4column.html">Gallery 4 Column</a></li>
+                                                                <li><a href="gallery-5column.html">Gallery 5 Column</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col col-width-2">
+                                                    <h3>Account Pages</h3>
+                                                    <ul>
+                                                        <li><a href="authorization.html">Authorization</a></li>
+                                                        <li><a href="authorization-toggle-form.html">Authorization 2</a></li>
+                                                        <li><a href="authorization-create-account.html">Create Account</a></li>
+                                                        <li><a href="authorization-login.html">Login Page</a></li>
+                                                        <li><a href="myaccount.html">My Account</a></li>
+                                                        <li><a href="myaccount-addresses.html">My Addresses</a></li>
+                                                        <li><a href="myaccount-addresses2.html">My Addresses 2</a></li>
+                                                        <li><a href="myaccount-order.html">My Orders</a></li>
+                                                        <li><a href="password-recovery.html">Password Recovery</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="blog.html">BLOG</a>
+                                    <div class="dropdown-megamenu">
+                                        <div class="dropdown-megamenu-scroll">
+                                            <div class="row">
+                                                <div class="col col-width-2">
+                                                    <ul>
+                                                        <li><a href="blog.html">Blog Left Sidebar</a></li>
+                                                        <li><a href="blog-right-column.html">Blog Right Sidebar</a></li>
+                                                        <li><a href="blog-no-column.html">Blog Without Sidebar</a></li>
+                                                        <li><a href="blog-post.html">Blog Post</a></li>
+                                                        <li><a href="blog-2column.html">Blog Grid 2 Column</a></li>
+                                                        <li><a href="blog-3column.html">Blog Grid 3 Column</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-auto header-col-r">
+                    <div class="header-search">
+                        <div class="searchbox-collapsed">
+                            <div class="searchbox-drop js-searchbox-drop">
+                                <form action="#"><input type="search" placeholder="I’m searching some..." class="searchbox-input"> <button type="submit" class="searchbox-submit" value=""><i class="icn-search"></i></button></form>
+                            </div><span class="searchbox-icon"><i class="icn-search"></i></span>
+                        </div>
+                    </div>
+                    <div class="header-v-divider"></div>
+                    <div class="js-header-links">
+                        <div class="header-drop header-drop--caret header-currency js-header-currency">
+                            <div class="dropdown"><a class="drop-toggle" href="#" data-toggle="dropdown">USD</a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <ul>
+                                        <li><a href="#">GBR<span> - United Kingdom Pounds</span></a></li>
+                                        <li><a href="#">DEM<span> - Germany Deutsche Marks</span></a></li>
+                                        <li><a href="#">EUR<span> - Euro</span></a></li>
+                                        <li class="active"><a href="#">USD<span> - United States Dollars</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-drop header-acount">
+                            <div class="dropdown"><a class="drop-toggle" href="#" data-toggle="dropdown"><i class="icn-user"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <ul>
+                                        <li><a href="authorization-login.html">Login</a></li>
+                                        <li><a href="authorization-create-account.html">Register</a></li>
+                                        <li><a href="myaccount.html">My Account</a></li>
+                                        <li><a href="cart.html">Checkout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-drop header-cart header-cart--overlay"><a class="drop-toggle js-sidecart-toggle" href="#"><i class="icn-cart"></i><span class="badge">23</span></a>
+                            <div class="sidecart js-sidecart">
+                                <div class="sidecart-top d-flex align-items-center">
+                                    <div class="sidecart-close js-sidecart-close"><i class="icn-close"></i>CLOSE</div>
+                                    <div class="sidecart-icon ml-auto"><i class="icn-cart"></i><span class="badge">23</span></div>
+                                </div>
+                                <div class="sidecart-table">
+                                    <div class="sidecart-prd">
+                                        <div class="sidecart-prd-photo-wrap">
+                                            <div class="sidecart-prd-photo"><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio=".78" data-src="{% static 'web/images/products/product-01.jpg' %}" alt=""></div><a href="#" class="sidecart-prd-delete"><i class="icn-close-1"></i></a>
+                                        </div>
+                                        <div class="sidecart-prd-info"><a href="#" class="sidecart-prd-title text-truncate">Basic knit dress chestdst egfdgd</a>
+                                            <div class="sidecart-prd-price"><span>1x</span><span>$39.00</span></div>
+                                            <div class="sidecart-prd-action"><a href="#">EDIT</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="sidecart-prd">
+                                        <div class="sidecart-prd-photo-wrap">
+                                            <div class="sidecart-prd-photo"><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio=".78" data-src="{% static 'web/images/products/product-02.jpg' %}" alt=""></div><a href="#" class="sidecart-prd-delete"><i class="icn-close-1"></i></a>
+                                        </div>
+                                        <div class="sidecart-prd-info"><a href="#" class="sidecart-prd-title text-truncate">Basic knit dress chestdst egfdgd</a>
+                                            <div class="sidecart-prd-price"><span>1x</span><span>$39.00</span></div>
+                                            <div class="sidecart-prd-action"><a href="#">EDIT</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="sidecart-prd">
+                                        <div class="sidecart-prd-photo-wrap">
+                                            <div class="sidecart-prd-photo"><img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-aspectratio=".78" data-src="{% static 'web/images/products/product-03.jpg' %}" alt=""></div><a href="#" class="sidecart-prd-delete"><i class="icn-close-1"></i></a>
+                                        </div>
+                                        <div class="sidecart-prd-info"><a href="#" class="sidecart-prd-title text-truncate">Basic knit dress chestdst egfdgd</a>
+                                            <div class="sidecart-prd-price"><span>1x</span><span>$39.00</span></div>
+                                            <div class="sidecart-prd-action"><a href="#">EDIT</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sidecart-bot d-flex align-items-center">
+                                    <div>SUBTOTAL:</div>
+                                    <div class="ml-auto">$ 146.00</div>
+                                </div><a href="#" class="btn mln-btn btn-block">View Cart</a> <a href="#" class="btn mln-btn mln-btn--border btn-block">Checkout</a>
+                            </div>
+                            <div class="dark-overlay js-sidecart-close"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-mobile header-mobile--compact">
+        <div class="container-fluid">
+            <div class="row header-row header-sticky-content js-header-sticky-content">
+                <div class="col-auto header-col-l">
+                    <div class="nav-wrap"><a href="#" class="pushmenu-toggle js-pushmenu-toggle"><i class="icn-menu"></i></a>
+                        <nav>
+                            <div class="mobile-menu menu--left js-pushmenu"><a href="#" class="js-pushmenu-toggle pushmenu-close">MENU<i class="icn-close"></i></a>
+                                <div class="pushmenu-wrapper">
+                                    <ul class="pushmenu js-pushmenu--first is-current">
+                                        <li><a href="index.html">HOME<span class="menu-badge menu-badge--color1">-30%</span></a>
+                                            <ul class="pushmenu pushmenu-sub">
+                                                <li><a href="index.html">Layout 01</a></li>
+                                                <li><a href="index-02.html">Layout 02</a></li>
+                                                <li><a href="index-03.html">Layout 03</a></li>
+                                                <li><a href="index-04.html">Layout 04</a></li>
+                                                <li><a href="index-05.html">Layout 05</a></li>
+                                                <li><a href="index-06.html">Layout 06</a></li>
+                                                <li><a href="index.html">Default Fashion</a></li>
+                                                <li><a href="index-skin-accessories.html">Accessories</a></li>
+                                                <li><a href="index-skin-techstore.html">Techstore</a></li>
+                                                <li><a href="index-skin-wheels.html">Wheels</a></li>
+                                                <li><a href="index-skin-furniture.html">Furniture</a></li>
+                                                <li><a href="coming-soon.html">Cooming Soon ....</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="listing.html">SHOP</a>
+                                            <ul class="pushmenu pushmenu-sub">
+                                                <li><a href="listing.html">Left Column</a></li>
+                                                <li><a href="listing-right-col.html">Right Column</a></li>
+                                                <li><a href="listing-no-col.html">Without Column</a></li>
+                                                <li><a href="listing-no-banner.html">Without Banners</a></li>
+                                                <li><a href="listing-sticky-filter.html">Sticky Filter</a></li>
+                                                <li><a href="listing-sticky-filters-row.html">Sticky Row Filter</a></li>
+                                                <li><a href="listing-2-per-row.html">Two per row</a></li>
+                                                <li><a href="listing-no-col.html">Three per row</a></li>
+                                                <li><a href="listing-4-per-row.html">Four per row</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="product.html">PRODUCT</a>
+                                            <ul class="pushmenu pushmenu-sub">
+                                                <li><a href="product.html">Left Previews</a></li>
+                                                <li><a href="product-6.html">Right Previews</a></li>
+                                                <li><a href="product-2.html">Bottom Previews</a></li>
+                                                <li><a href="product-7.html">Top Previews</a></li>
+                                                <li><a href="product-3.html">Bottom Previews Grid</a></li>
+                                                <li><a href="product-4.html">Gallery Grid</a></li>
+                                                <li><a href="product-5.html">Fixed Gallery</a></li>
+                                                <li><a href="product-8.html">Reverse Columns</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="about.html">INFO PAGES</a>
+                                            <ul class="pushmenu pushmenu-sub">
+                                                <li><a href="about.html">About Us</a></li>
+                                                <li><a href="contacts.html">Contact</a></li>
+                                                <li><a href="faq.html">FAQ</a></li>
+                                                <li><a href="page404.html">404 Page</a></li>
+                                                <li><a href="coming-soon.html">Coming Soon</a></li>
+                                                <li><a href="typography.html">Typography</a></li>
+                                                <li><a href="lookbook.html">Lookbook</a></li>
+                                                <li><a href="gift-card.html">Gift Card</a></li>
+                                                <li><a href="gallery.html">Gallery</a>
+                                                    <ul class="pushmenu pushmenu-sub">
+                                                        <li><a href="gallery-2column.html">Gallery 2 Column</a></li>
+                                                        <li><a href="gallery.html">Gallery 3 Column</a></li>
+                                                        <li><a href="gallery-4column.html">Gallery 4 Column</a></li>
+                                                        <li><a href="gallery-5column.html">Gallery 5 Column</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="myaccount.html">ACCOUNT</a>
+                                            <ul class="pushmenu pushmenu-sub">
+                                                <li><a href="authorization.html">Authorization</a></li>
+                                                <li><a href="authorization-toggle-form.html">Authorization 2</a></li>
+                                                <li><a href="authorization-create-account.html">Create Account</a></li>
+                                                <li><a href="authorization-login.html">Login Page</a></li>
+                                                <li><a href="myaccount.html">My Account</a></li>
+                                                <li><a href="myaccount-addresses.html">My Addresses</a></li>
+                                                <li><a href="myaccount-addresses2.html">My Addresses 2</a></li>
+                                                <li><a href="myaccount-order.html">My Orders</a></li>
+                                                <li><a href="password-recovery.html">Password Recovery</a></li>
+                                                <li><a href="#">BUY NOW</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="about.html">BLOG</a>
+                                            <ul class="pushmenu pushmenu-sub">
+                                                <li><a href="blog.html">Blog Left Sidebar</a></li>
+                                                <li><a href="blog-right-column.html">Blog Right Sidebar</a></li>
+                                                <li><a href="blog-no-column.html">Blog Without Sidebar</a></li>
+                                                <li><a href="blog-post.html">Blog Post</a></li>
+                                                <li><a href="blog-2column.html">Blog Grid 2 Column</a></li>
+                                                <li><a href="blog-3column.html">Blog Grid 3 Column</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mobile-menu-bottom">
+                                    <div class="header-drop-title">Currency</div>
+                                    <div class="header-drop header-currency js-header-mobile-currency"></div>
+                                </div>
+                            </div>
+                            <div class="dark-overlay js-pushmenu-toggle"></div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="header-col-logo">
+                    <div class="header-logo"><a href="index.html"><img src="{% static 'web/images/logo.png' %}" srcset="images/logo@2x.png 2x" alt="Logo"></a></div>
+                </div>
+                <div class="col-auto header-col-r">
+                    <div class="header-search-mob">
+                        <div class="searchbox-collapsed"><span class="searchbox-icon"><i class="icn-search"></i></span></div>
+                    </div>
+                    <div class="js-header-mobile-links"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>  
