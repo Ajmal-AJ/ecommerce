@@ -16,28 +16,39 @@
         aria-controls="ui-basic"
       >
         <i class="icon-layout menu-icon"></i>
-        <span class="menu-title">UI Elements</span>
+        <span class="menu-title">Products</span>
         <i class="menu-arrow"></i>
       </a>
       <div class="collapse" id="ui-basic">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="../../pages/ui-features/buttons.html"
-              >Buttons</a
+            <a class="nav-link" href="{% url 'app:category_view' %}"
+              >Categories</a
             >
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              href="../../pages/ui-features/dropdowns.html"
-              >Dropdowns</a
+            <a class="nav-link" href="{% url 'app:products_view' %}"
+              >Products</a
             >
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              href="../../pages/ui-features/typography.html"
-              >Typography</a
+            <a class="nav-link" href="{% url 'app:brands_view' %}"
+              >Brands</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'app:colors_view' %}"
+              >Colors</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'app:sizes_view' %}"
+              >Sizes</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'app:material_view' %}"
+              >Materials</a
             >
           </li>
         </ul>
@@ -52,16 +63,17 @@
         aria-controls="form-elements"
       >
         <i class="icon-columns menu-icon"></i>
-        <span class="menu-title">Form elements</span>
+        <span class="menu-title">Sales</span>
         <i class="menu-arrow"></i>
       </a>
       <div class="collapse" id="form-elements">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="../../pages/forms/basic_elements.html"
-              >Basic Elements</a
+            <a class="nav-link" href="{% url 'app:sales_list' %}"
+              >Sale </a
             >
           </li>
+          
         </ul>
       </div>
     </li>
@@ -74,15 +86,13 @@
         aria-controls="charts"
       >
         <i class="icon-bar-graph menu-icon"></i>
-        <span class="menu-title">Charts</span>
+        <span class="menu-title">Purchase</span>
         <i class="menu-arrow"></i>
       </a>
       <div class="collapse" id="charts">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="../../pages/charts/chartjs.html"
-              >ChartJs</a
-            >
+            <a class="nav-link" href="#">Purchase</a>
           </li>
         </ul>
       </div>
@@ -96,14 +106,14 @@
         aria-controls="tables"
       >
         <i class="icon-grid-2 menu-icon"></i>
-        <span class="menu-title">Tables</span>
+        <span class="menu-title">Customers</span>
         <i class="menu-arrow"></i>
       </a>
       <div class="collapse" id="tables">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="../../pages/tables/basic-table.html"
-              >Basic table</a
+            <a class="nav-link" href="{% url 'app:customers_view' %}"
+              >Customer</a
             >
           </li>
         </ul>
@@ -118,81 +128,17 @@
         aria-controls="icons"
       >
         <i class="icon-contract menu-icon"></i>
-        <span class="menu-title">Icons</span>
+        <span class="menu-title">Vendors</span>
         <i class="menu-arrow"></i>
       </a>
       <div class="collapse" id="icons">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
-            <a class="nav-link" href="../../pages/icons/mdi.html"
-              >Mdi icons</a
-            >
+            <a class="nav-link" href="#">Vendors</a>
           </li>
         </ul>
       </div>
     </li>
-    <li class="nav-item">
-      <a
-        class="nav-link"
-        data-toggle="collapse"
-        href="#auth"
-        aria-expanded="false"
-        aria-controls="auth"
-      >
-        <i class="icon-head menu-icon"></i>
-        <span class="menu-title">User Pages</span>
-        <i class="menu-arrow"></i>
-      </a>
-      <div class="collapse" id="auth">
-        <ul class="nav flex-column sub-menu">
-          <li class="nav-item">
-            <a class="nav-link" href="../../pages/samples/login.html">
-              Login
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../../pages/samples/register.html">
-              Register
-            </a>
-          </li>
-        </ul>
-      </div>
-    </li>
-    <li class="nav-item">
-      <a
-        class="nav-link"
-        data-toggle="collapse"
-        href="#error"
-        aria-expanded="false"
-        aria-controls="error"
-      >
-        <i class="icon-ban menu-icon"></i>
-        <span class="menu-title">Error pages</span>
-        <i class="menu-arrow"></i>
-      </a>
-      <div class="collapse" id="error">
-        <ul class="nav flex-column sub-menu">
-          <li class="nav-item">
-            <a class="nav-link" href="../../pages/samples/error-404.html">
-              404
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../../pages/samples/error-500.html">
-              500
-            </a>
-          </li>
-        </ul>
-      </div>
-    </li>
-    <li class="nav-item">
-      <a
-        class="nav-link"
-        href="../../pages/documentation/documentation.html"
-      >
-        <i class="icon-paper menu-icon"></i>
-        <span class="menu-title">Documentation</span>
-      </a>
-    </li>
+   
   </ul>
 </nav>

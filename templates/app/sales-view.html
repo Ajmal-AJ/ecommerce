@@ -1,0 +1,54 @@
+{% extends 'app/base.html' %}
+ {% load static %} 
+ {% block content %}
+
+<div class="container-scroller">
+ 
+  <div class="container-fluid page-body-wrapper">
+    {% include 'app/partials/leftsidebar.html' %}
+    <div class="main-panel">
+      <div class="content-wrapper">
+        <div class="row">
+          <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Sales</h4>
+                <p class="card-description">
+                  <!-- Add class <code>.table-striped</code> -->
+                </p>
+                <div class="table-responsive">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Product Id</th>
+                          <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Brand</th>
+                            <th>category</th>
+                            
+                            
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for item in sale_view.get_sales_item %}
+                        <tr>
+                          <td>{{item.product.product_id}}</td>
+                          <td>{{item.product.title}}</td>
+                          <td>&#8377;{{item.product.price}}</td>
+                          <td>{{item.product.brand}}</td>
+                          <td>{{item.product.category.category.title}}</td>
+                        </tr>
+                        {% endfor %}
+                     
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

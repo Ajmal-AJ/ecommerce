@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="shortcut icon" href="{% static 'app/images/favicon.png' %}" />
+    <link rel="stylesheet" href="{% static 'app/vendors/feather/feather.css' %}">
+    <link rel="stylesheet" href="{% static 'app/vendors/ti-icons/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'app/vendors/css/vendor.bundle.base.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/vertical-layout-light/style.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/vertical-layout-light/custom.css' %}">
+</head>
+
+<body>
+
+    <div class="container-scroller">
+        <div class="container-fluid page-body-wrapper full-page-wrapper">
+            <div class="content-wrapper d-flex align-items-center auth px-0">
+                <div class="row w-100 mx-0">
+                    <div class="col-lg-4 mx-auto">
+                        <div class="auth-form-light py-5 px-4 px-sm-5">
+                            <div class="brand-logo text-center">
+                                <img src="{% static 'app/images/logo-dark.png' %}" alt="logo">
+                            </div>
+                            {% block content %}
+
+                            {% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content-wrapper ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+
+
+    <script src="{% static 'app/vendors/js/vendor.bundle.base.js' %}"></script>
+    {% block plugins %}{% endblock %}
+    <script src="{% static 'app/js/off-canvas.js' %}"></script>
+    <script src="{% static 'app/js/hoverable-collapse.js' %}"></script>
+    <script src="{% static 'app/js/template.js' %}"></script>
+    <script src="{% static 'app/js/settings.js' %}"></script>
+    <script src="{% static 'app/js/todolist.js' %}"></script>
+    <script src="{% static 'app/js/sweetalert2.all.min.js' %}"></script>
+    <script src="{% static 'app/js/script.js' %}"></script>
+    {% block javascript %}{% endblock %}
+</body>
+
+</html>

@@ -1,12 +1,16 @@
 from pathlib import Path
+from decouple import config, Csv
 
+
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = config('SECRET_KEY')
 
-SECRET_KEY = 'django-insecure-)d^l70vzyku_=ugb+yh8kp1ww08$_s1zta#y*1(+zx(j8++^6o'
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = config('DEBUG', default=True, cast=bool)
 
-
-DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -19,6 +23,8 @@ INSTALLED_APPS = [
     'tinymce',
     'versatileimagefield',
     'django_filters',
+    'registration',
+    'crispy_forms',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -71,6 +77,17 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': config('DB_ENGINE'),
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
+        'PORT': '',
+    }
+}
+
+DATABASES = {
+    'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
@@ -78,19 +95,13 @@ DATABASES = {
 
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',},
+    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',},
+    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',},
+    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',},
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 VERSATILEIMAGEFIELD_SETTINGS = {
     'cache_length': 2592000,
@@ -103,6 +114,29 @@ VERSATILEIMAGEFIELD_SETTINGS = {
     'image_key_post_processor': None,
     'progressive_jpeg': False
 }
+
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_AUTO_LOGIN = True
+SEND_ACTIVATION_EMAIL = False
+REGISTRATION_EMAIL_SUBJECT_PREFIX = 'Ecommerce'
+
+REGISTRATION_OPEN = True
+LOGIN_URL = '/accounts/login/'
+LOGOUT_URL = '/accounts/logout/'
+LOGIN_REDIRECT_URL = '/app/'
+
+
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_PORT = config('EMAIL_PORT')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = True
+
+DEFAULT_FROM_EMAIL= config('DEFAULT_FROM_EMAIL')
+DEFAULT_BCC_EMAIL= config('DEFAULT_BCC_EMAIL')
+DEFAULT_REPLY_TO_EMAIL = config('DEFAULT_REPLY_TO_EMAIL')
+SERVER_EMAIL = config('SERVER_EMAIL')
+ADMIN_EMAIL = config('ADMIN_EMAIL')
 
 
 LANGUAGE_CODE = 'en-us'

@@ -1,0 +1,50 @@
+{% extends 'app/base.html' %}
+ {% load static %} 
+ {% block content %}
+
+<div class="container-scroller">
+ 
+  <div class="container-fluid page-body-wrapper">
+    {% include 'app/partials/leftsidebar.html' %}
+    <div class="main-panel">
+      <div class="content-wrapper">
+        <div class="row">
+          <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Material page</h4>
+                <p class="card-description">
+                  <!-- Add class <code>.table-striped</code> -->
+                </p>
+                <div class="table-responsive">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Material</th>
+                        <th>Name</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for material in materials %}
+                      <tr>
+                        <td class="py-1">
+                          <img
+                            src="{{material.image.crop.36x36}}"
+                            alt="image"
+                          />
+                        </td>
+                        <td>{{material.title}}</td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
